@@ -32,6 +32,7 @@ export default class TodoForm extends Component {
           onChange={this.handleChange}
           placeholder="Enter todo..."
         />
+        <button onClick={this.handleSubmit}>Add Todo</button>
       </form>
     );
   }
