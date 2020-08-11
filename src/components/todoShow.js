@@ -8,11 +8,19 @@ export default class TodoShow extends Component {
     return (
       <div
         style={{
-          textDecoration: this.props.todo.compelete ? "line-through" : "",
+          display: "flex",
+          justifyContent: "center",
         }}
-        onClick={this.props.toggleItem}
       >
-        {this.props.todo.text}
+        <div
+          style={{
+            textDecoration: this.props.todo.compelete ? "line-through" : "",
+          }}
+          onClick={this.props.toggleItem}
+        >
+          {this.props.todo.text}
+        </div>
+        <button onClick={this.props.deleteTodo}>x</button>
       </div>
     );
   }
